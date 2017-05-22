@@ -1,4 +1,4 @@
-# redux-saga-tester
+# better-redux-saga-tester
 Full redux environment testing helper for redux-saga.
 
 [redux-saga](https://github.com/yelouafi/redux-saga/) is a great library that provides an easy way to test your sagas step-by-step, but it's tightly coupled to the saga implementation. Try a non-breaking reorder of the internal `yield`s, and the tests will fail.
@@ -10,7 +10,7 @@ This tester library provides a full redux environment to run your sagas in, taki
 ## Installation
 
 ```
-$ npm install --save-dev redux-saga-tester
+$ npm install --save-dev better-redux-saga-tester
 ```
 
 ## Basic Example

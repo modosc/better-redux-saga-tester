@@ -1,6 +1,6 @@
 {
-  "name": "redux-saga-tester",
-  "version": "1.0.1",
+  "name": "better-redux-saga-tester",
+  "version": "1.0.0",
   "description": "Full redux environment testing helper for redux-saga",
   "main": "dist/SagaTester.js",
   "scripts": {
@@ -10,23 +10,23 @@
     "test": "mocha --compilers js:babel-register && npm run lint",
     "test-dev": "mocha --watch --compilers js:babel-register",
     "compile": "babel -d dist/ src/",
-    "build": ":",
-    "release": "npm install @wix/wnpm-ci && wnpm-release -- --no-shrinkwrap"
+    "build": ":"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wix/redux-saga-tester.git"
+    "url": "https://github.com/modosc/better-redux-saga-tester.git"
   },
   "keywords": [
     "redux-saga",
     "test"
   ],
-  "author": "Guy Benron",
+  "author": "modosc (http://github.com/modosc)",
+  "contributors": [ "Guy Benron" ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wix/redux-saga-tester/issues"
+    "url": "https://github.com/modosc/better-redux-saga-tester/issues"
   },
-  "homepage": "https://github.com/wix/redux-saga-tester#readme",
+  "homepage": "https://github.com/modosc/better-redux-saga-tester#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.14.0",
@@ -37,13 +37,13 @@
     "babel-register": "^6.14.0",
     "babel-runtime": "^6.11.6",
     "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
+    "chai-as-promised": "^6.0.0",
     "eslint": "^3.13.1",
     "mocha": "^3.0.2",
     "nock": "^9.0.2",
     "node-fetch": "^1.6.3",
     "redux": "^3.6.0",
-    "redux-saga": "^0.11.1"
+    "redux-saga": "^0.15.3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
