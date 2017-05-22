@@ -90,6 +90,8 @@ it('Showcases the tester API', async () => {
         options,
     });
     sagaTester.start(listenAndFetch);
+    // task is a redux-saga task
+    const task = sagaTester.start(listenAndFetch);
 
     // Check that state was populated with initialState
     expect(sagaTester.getState()).to.deep.equal(initialState);

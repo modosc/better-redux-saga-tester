@@ -92,7 +92,11 @@ describe('SagaTester', () => {
             yield flag = true;
         };
         const sagaTester = new SagaTester({});
-        sagaTester.start(sagas);
+
+        const result = sagaTester.start(sagas);
+        // should get back a redux-saga task
+        expect(result).to.be.a('object');
+        expect(result).to.have.property('@@redux-saga/TASK', true);
         expect(flag).to.equal(true);
     });
 
@@ -107,7 +111,7 @@ describe('SagaTester', () => {
         expect(sagaTester.getState()).to.deep.equal({someKey : someFinalValue});
         expect(sagaTester.getCalledActions()).to.deep.equal([someAction]);
 
-		// After reset, state reverts but action history remains
+        // After reset, state reverts but action history remains
         sagaTester.reset();
         expect(sagaTester.getState()).to.deep.equal(someInitialState);
         expect(sagaTester.getCalledActions()).to.deep.equal([
