@@ -21,13 +21,13 @@ export default class SagaIntegrationTester {
         const reducerFn = typeof reducers === 'object' ? combineReducers(reducers) : reducers;
 
         const finalReducer = (state, action) => {
-          // reset state if requested
+            // reset state if requested
             if (action.type === RESET_TESTER_ACTION_TYPE) return initialState;
 
-          // supply identity reducer as default
+            // supply identity reducer as default
             if (!reducerFn) return initialState;
 
-          // otherwise use the provided reducer
+            // otherwise use the provided reducer
             return reducerFn(state, action);
         };
 

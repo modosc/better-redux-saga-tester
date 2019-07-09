@@ -139,7 +139,7 @@ describe('SagaTester', () => {
     it('Resets the state of the store to the initial state when using a reducer function', () => {
         const someFinalValue = 'SOME_FINAL_VALUE';
         const reducers = (state = {someKey: someInitialValue}, action) =>
-			(action.type === someActionType ? {someKey: someFinalValue} : state);
+            (action.type === someActionType ? {someKey: someFinalValue} : state);
 
         const sagaTester = new SagaTester({initialState : someInitialState, reducers});
         sagaTester.dispatch(someAction);
